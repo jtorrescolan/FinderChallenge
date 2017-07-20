@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Finder challenge</title>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Proxima+Nova" rel="stylesheet" type="text/css">
+    <link href="/vendor/pure/pure-min.css" rel="stylesheet">
+    <link href="/vendor/awsomecomplete/awesomplete.css" rel="stylesheet">
+    <link href="/styles/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="app pure-g">
+      <header class="pure-u-1">
+        <div class="pure-u-1-3">
+          <h1 class="logo">Finder challenge</h1>
+        </div>
+        <div class="pure-u-15-24">
+          <div class="search-form">
+            <div class="form">
+              <input class="search-input" type="text" data-minchars="3" data-maxitems="7">
+              <button class="search-button" disabled="true" type="button">buscar</button><a class="save-search" href="javascript:void(0)">guardar búsqueda</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="filters pure-u-1-4"></aside>
+      <content class="pure-u-3-4"></content>
+      <footer class="pure-u-1"></footer>
+    </div>
+    <script src="/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/vendor/awsomecomplete/awesomplete.min.js"></script>
+    <script src="/scripts/global.js"></script>
+    <script src="/scripts/search-form.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+    <script src="/scripts/content.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script type="html/template" id="template-list-filters">
+      <h3>% title %</h3>
+      <ul class="list-filters"></ul>
+    </script>
+    <script type="html/template" id="template-list-filters-item">
+      <div class="list-item" data-id="% id %"><a href="javascript:void(0)">% label %</a></div>
+    </script>
+    <script type="html/template" id="template-list-content">
+      <div class="content-item pure-u-7-24" data-id="% id %">
+        <div class="image"><img src="% img %"></div>
+        <h3 class="title">% title %</h3>
+        <p class="description">% teaser %</p>
+      </div>
+    </script>
+  </body>
+</html>

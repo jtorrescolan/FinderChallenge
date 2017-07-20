@@ -1,0 +1,32 @@
+* {
+  font-family: "Proxima Nova";
+}
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.search-form {
+  margin-top: 30px;
+}
+.search-form .search-input,
+.search-form .search-button,
+.search-form .save-search {
+  display: inline-block;
+  margin-right: 4px;
+}
+.search-form .search-input:last-child,
+.search-form .search-button:last-child,
+.search-form .save-search:last-child {
+  margin-right: 0px;
+}
+.search-form .search-button[disabled] {
+  background-color: #808080;
+}
+@media only screen and (max-width: 650px) {
+  .search-form {
+    display: none;
+  }
+}
+ul li {
+  list-style: none;
+}
